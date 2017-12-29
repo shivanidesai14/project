@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,9 +22,8 @@ $result=$obj->usergetdata();
   <h1>Admin</h1>
 </div>
 <div class="container">
-<table class="table">
+<table class="table table-bordered">
 <thead>
-<th>Action</th>
 <th>Name</th>
 <th>Email</th>
 <th>Image</th>
@@ -40,12 +40,11 @@ if($result->num_rows>0)
 
         
             echo '<tr>';
-            echo '<td class="active"><input type="checkbox" name="chk[]" value="'. $row["pk_email_id"] .'" ></td>';
-            echo '<td class="success">'. $row["user_name"]  .'</td>';
-            echo '<td class="info">'. $row["user_gender"] .'</td>';
-            echo '<td><img src="../'. $row["user_profile_pic"] .'" style="height:200px;width:200px;" class="img-responsive"></td>';
-             echo '<td><a href="admindelete.php?id='. $row["pk_email_id"].'"><span  class="glyphicon glyphicon-trash btn btn-danger"></span></td>';
-             echo '<td><a href="viewuseradmindetail.php?id='.  $row["pk_email_id"] .'"><span  class="glyphicon glyphicon-fullscreen btn btn-success"></span></td>';
+            echo '<td>'. $row["user_name"]  .'</td>';
+            echo '<td>'. $row["user_gender"] .'</td>';
+            echo '<td><img src="'. $row["user_profile_pic"] .'" style="height:200px;width:200px;" class="img-responsive"></td>';
+             echo '<td><a href="admindelete.php?id='. $row["pk_email_id"].'"><span  class="glyphicon glyphicon-trash"></span></td>';
+             echo '<td><a href="viewuseradmindetail.php?id='.  $row["pk_email_id"] .'"><span  class="glyphicon glyphicon-plus-sign"></span></td>';
             echo '</tr>';
         }
     }

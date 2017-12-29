@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,9 +47,9 @@ if($result->num_rows>0)
             echo '<td><input type="checkbox" name="chk[]" value="'. $row["pk_email_id"] .'" ></td>';
             echo '<td>'. $row["user_name"]  .'</td>';
             echo '<td>'. $row["user_gender"] .'</td>';
-            echo '<td><img src="../'. $row["user_profile_pic"] .'" style="height:200px;width:200px;" class="img-responsive"></td>';
-             echo '<td><a href="userdelete.php?id='. $row["pk_email_id"].'"><span  class="glyphicon glyphicon-trash btn btn-danger"></span></td>';
-             echo '<td><a href="viewuseradmindetail.php?id='.  $row["pk_email_id"] .'"><span  class="glyphicon glyphicon-fullscreen btn btn-success"></span></td>';
+            echo '<td><img src="'. $row["user_profile_pic"] .'" style="height:200px;width:200px;" class="img-responsive"></td>';
+             echo '<td><a href="userdelete.php?id='. $row["pk_email_id"].'"><span  class="glyphicon glyphicon-trash"></span></td>';
+             echo '<td><a href="viewuseradmindetail.php?id='.  $row["pk_email_id"] .'"><span  class="glyphicon glyphicon-plus-sign"></span></td>';
             echo '</tr>';
         }
     }

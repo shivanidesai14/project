@@ -1,0 +1,23 @@
+<?php
+$_drp=$_POST["cat"];
+if(isset($_POST["btnfind"]))
+{
+if($_drp==="CLOTHES")
+{
+    
+    header('location:clothdisplay.php');
+}
+elseif($_drp==="BAGS")
+{
+    header('location:bagdisplay.php');
+}
+elseif($_drp==="ELECTRONICS")
+{
+    header('location:eledisplay.php');
+}
+elseif($_drp==="WATCHES")
+{
+    header('location:watchdisplay.php');
+}
+}
+?>

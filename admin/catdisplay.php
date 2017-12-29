@@ -7,6 +7,17 @@
 
 <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
 <script src="../js/bootstrap.min.js"></script>
+<link href="../css/jquery.dataTables_themeroller.css" rel="stylesheet">
+<!-- Latest compiled and minified JavaScript -->
+<script src="../js/jquery.dataTables.min.js"></script>
+<script>
+        $(function () {
+            $('#dataTable').dataTable({
+                "bJQueryUI": true,
+                "sPaginationType": "full_numbers"
+            });
+        });
+    </script>
 <body>
 <?php
 include 'navbar.php';
@@ -21,7 +32,7 @@ $result=$obj->catgetdata();
   <h1>Cat Table</h1>
 </div>
 <div class="container">
-<table class="table table-bordered">
+<table class="table table-bordered" id="dataTable">
 <thead>
 <th>Action</th>
 <th>Name</th>

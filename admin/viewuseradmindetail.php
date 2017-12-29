@@ -26,7 +26,7 @@ $result=$obj->useradmindetail($_email);
   echo '<div class="row">';
  echo '<div class="col-xs-5">';
    echo ' <center><a href="#">';
-     echo '<ceter><img src="../' . $row["user_profile_pic"] . '" class="img-responsive img-circle" style="height:400px;width:300px;"></center>';
+     echo '<ceter><img src="' . $row["user_profile_pic"] . '" class="img-responsive img-circle" style="height:400px;width:300px;"></center>';
       echo'  </a>';
    echo '</div>';
  echo '<div class="col-xs-7">';
@@ -40,5 +40,6 @@ echo '</div>';
       
     }  
 ?>
+
 </body>
 </html>
